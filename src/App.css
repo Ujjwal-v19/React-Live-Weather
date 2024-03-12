@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #f0f0f0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.inputData {
+  background-color: lightblue;
+  padding: 30px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.inputField {
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto;
+  border: none;
+  border-radius: 25px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease; /* Added transition for smooth hover effect */
+}
+
+.inputField:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Add shadow effect on hover */
+}
+
+.info {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .box {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .inputData {
+    padding: 20px;
+    margin: 10px;
   }
+
+  .inputField {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+}
+
+/* Hover effect */
+.box:hover,
+.inputData:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }

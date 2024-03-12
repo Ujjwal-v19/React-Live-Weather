@@ -23,6 +23,7 @@ function TempApp() {
         <div className="inputData">
           <h2>Live Weather</h2>
           <input
+            placeholder="Enter Any City Name"
             type="search"
             className="inputField"
             onChange={(e) => setSearch(e.target.value)}
@@ -32,7 +33,7 @@ function TempApp() {
             {weatherData ? (
               <>
                 <h2 className="location">
-                  <i className="fa-solid fa-street-view"></i>
+                  <i className="fa-solid fa-street-view animate"></i> {/* Added "animate" class */}
                   {weatherData.name ? weatherData.name : "City Name Unavailable"}
                 </h2>
                 <h1 className="temp">
